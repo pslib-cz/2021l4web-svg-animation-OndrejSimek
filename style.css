@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+}
+
+#signature {
+    display: none;
+    stroke-dasharray: 650.3245849609375;
+    stroke-dashoffset: 650.3245849609375;
+    animation: sign 4s ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+
+@keyframes sign {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#circle {
+    stroke-dasharray: 380;
+    stroke-dashoffset: 380;
+    animation: sign 4s linear;
+    animation-fill-mode: forwards;
+}
+
+#circle2 {
+    stroke-dasharray: 63.3;
+    stroke-dashoffset: -126.6;
+    animation: sign 4s linear;
+}
+
+.eye {
+    animation: opacity 2s;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+#smile {
+    display: none;
+    transition: linear 0.5s;
+    animation: lol 5s;
+    animation-delay: 5s;
+    position: absolute;
+    top: 0;
+    left: 130px;
+}
+
+#smile:hover {
+    transform: rotate(180deg) scale(0);
+    transition: linear 0.5s;
+}
+
+@keyframes lol {
+    0% {
+        top: 0;
+        left: 0;
+        transform: rotate(4turn);
+    }
+
+    25% {
+        top: 0;
+        left: calc(100vw - 170px);
+    }
+
+    50% {
+        top: calc(100vh - 170px);
+        left: calc(100vw - 170px);
+    }
+
+    75% {
+        top: calc(100vh - 170px);
+        left: 0;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+    }
+
+}
+
+.triangle {
+    margin-top: 20px;
+    position: relative;
+    opacity: 80%;
+    transition: all 0.3s ease-out;
+}
+
+.triangle-1 {
+    transform: translateX(-5%);
+    opacity: 0;
+    z-index: 10;
+}
+
+.triangle-2 {
+    z-index: 5;
+    opacity: 95%;
+}
+
+.triangle-3 {
+    transform: translateX(-75%);
+    z-index: 2;
+}
+nav {
+    width: 80px;
+    background-color: black;
+    height: 100vh;
+    transition: linear 0.3s;
+}
+nav:hover {
+    width: 250px;
+    transition: linear 0.3s;
+}
+.list-item {
+    color: white;
+    display: none;
+}
+nav:hover li {
+    display: block;
+
+}
+.open-menu {
+    width: 100px;
+    transform: translateX(-15%);
+}
+
+nav:hover .open-menu .triangle-1 {
+    transform: translateX(85%);
+    opacity: 80%;
+}
+nav:hover .open-menu .triangle-2 {
+    transform: translateX(10%);
+}
+nav:hover .open-menu .triangle-3 {
+    transform: translateX(10%);
+    opacity: 0;
+
+}

@@ -6,118 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVG</title>
-    <style>
-        body {
-            margin: 0;
-        }
-
-        #signature {
-            stroke-dasharray: 650.3245849609375;
-            stroke-dashoffset: 650.3245849609375;
-            animation: sign 4s ease;
-            animation-fill-mode: forwards;
-            position: absolute;
-            top: 200px;
-            left: 200px;
-        }
-
-        @keyframes sign {
-            to {
-                stroke-dashoffset: 0;
-            }
-        }
-
-        #circle {
-            stroke-dasharray: 380;
-            stroke-dashoffset: 380;
-            animation: sign 4s linear;
-            animation-fill-mode: forwards;
-        }
-
-        .triangle {
-            fill: transparent;
-            stroke: black;
-            stroke-width: 8;
-            transition: all 0.8s ease-in-out;
-        }
-
-        #circle2 {
-            stroke-dasharray: 63.3;
-            stroke-dashoffset: 126.6;
-            animation: sign 4s linear;
-        }
-
-        .eye {
-            animation: opacity 2s;
-        }
-
-        @keyframes opacity {
-            0% {
-                opacity: 0;
-            }
-
-            50% {
-                opacity: 50%;
-            }
-
-            100% {
-                opacity: 100%;
-            }
-        }
-
-        #smile {
-            transition: linear 0.5s;
-            animation: lol 5s;
-            animation-delay: 4s;
-            position: absolute;
-        }
-
-        #smile:hover {
-            transform: rotate(180deg) scale(0);
-            transition: linear 0.5s;
-        }
-        
-        @keyframes lol {
-            0% {
-                top: 0;
-                left: 0;
-                transform: rotate(4turn);
-            }
-
-            25% {
-                top: 0;
-                left: calc(100vw - 170px);
-            }
-
-            50% {
-                top: calc(100vh - 170px);
-                left: calc(100vw - 170px);
-            }
-
-            75% {
-                top: calc(100vh - 170px);
-                left: 0;
-            }
-
-            100% {
-                top: 0;
-                left: 0;
-            }
-
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div class="open-menu">
+                <svg class="triangle triangle-1" width="30" height="30" viewBox="0 0 1280 1153">
+                    <g transform="translate(0,1153) scale(0.1,-0.1)" fill="#E3B505" stroke="none">
+                        <path
+                            d="m 12153.308,5861.5593 c -46,423 -228,838 -490,1114 -111,118 -217,201 -364,289 -364,216 -8205.9998,4707.9997 -8279.9998,4741.9997 -444,208 -916,205 -1361,-9 -470,-226 -835.00003,-672 -965.00003,-1179 -57,-225 -53,205 -56,-5031.9997 -3,-3271 0,-4830.99996 7,-4897.99996 52,-494 308,-915.000002 729.00003,-1198 231,-156 484,-256 776,-306 124,-21 452,-24 570,-5 172,28 338,78 535,160 484,202 929,447.999998 1795,992 806,506.99996 581,375 3630,2119.99996 1435.9998,821 2654.9998,1520 2709.9998,1553 146,86 221,145 331,260 222,231 359,515 420,873 18,109 26,409 13,524 z" />
+                    </g>
+                </svg>
+                <svg class="triangle triangle-2" width="30" height="30" viewBox="0 0 1280 1153">
+                    <g transform="translate(0,1153) scale(0.1,-0.1)" fill="#DB504A" stroke="none">
+                        <path
+                            d="m 12153.308,5861.5593 c -46,423 -228,838 -490,1114 -111,118 -217,201 -364,289 -364,216 -8205.9998,4707.9997 -8279.9998,4741.9997 -444,208 -916,205 -1361,-9 -470,-226 -835.00003,-672 -965.00003,-1179 -57,-225 -53,205 -56,-5031.9997 -3,-3271 0,-4830.99996 7,-4897.99996 52,-494 308,-915.000002 729.00003,-1198 231,-156 484,-256 776,-306 124,-21 452,-24 570,-5 172,28 338,78 535,160 484,202 929,447.999998 1795,992 806,506.99996 581,375 3630,2119.99996 1435.9998,821 2654.9998,1520 2709.9998,1553 146,86 221,145 331,260 222,231 359,515 420,873 18,109 26,409 13,524 z" />
+                    </g>
+                </svg>
+                <svg class="triangle triangle-3" width="30" height="30" viewBox="0 0 1280 1153">
+                    <g transform="translate(0,1153) scale(0.1,-0.1)" fill="#E3B505" stroke="none">
+                        <path
+                            d="m 12153.308,5861.5593 c -46,423 -228,838 -490,1114 -111,118 -217,201 -364,289 -364,216 -8205.9998,4707.9997 -8279.9998,4741.9997 -444,208 -916,205 -1361,-9 -470,-226 -835.00003,-672 -965.00003,-1179 -57,-225 -53,205 -56,-5031.9997 -3,-3271 0,-4830.99996 7,-4897.99996 52,-494 308,-915.000002 729.00003,-1198 231,-156 484,-256 776,-306 124,-21 452,-24 570,-5 172,28 338,78 535,160 484,202 929,447.999998 1795,992 806,506.99996 581,375 3630,2119.99996 1435.9998,821 2654.9998,1520 2709.9998,1553 146,86 221,145 331,260 222,231 359,515 420,873 18,109 26,409 13,524 z" />
+                    </g>
+                </svg>
 
-    <svg id="smile" viewbox=" 0 0" width="150" height="150">
+            </div>
+            <ul>
+                <li class="list-item"><a onclick="smajlik()">smajlík</a></li>
+                <li class="list-item"><a onclick="signature()">Autor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <svg class="svg" id="smile" viewbox=" 0 0" width="150" height="150">
         <circle id="circle" cx="75" cy="75" r="60" style="stroke: lightblue; stroke-width:10; fill:none" />
         <circle id="circle2" cx="75" cy="85" r="20" style="stroke: lightblue; stroke-width:10; fill:none" />
         <circle class="eye" cx="50" cy="55" r="5" style="stroke: lightblue; stroke-width:3; fill:lightblue" />
         <circle class="eye" cx="100" cy="55" r="5" style="stroke: lightblue; stroke-width:3; fill:lightblue" />
     </svg>
-    <!-- 
-        <svg viewbox="0 0" id="signature" width="200" height="120">
+
+    <svg class="svg" viewbox="0 0" id="signature" width="200" height="120">
         <g>
             <title>Layer 1</title>
             <path fill="none" stroke="#000" id="svg_2"
@@ -130,7 +60,10 @@
                 stroke-width="5" />
         </g>
     </svg>
--->
+
+
+
+    <script src="./style.js"></script>
 </body>
 
 </html>
