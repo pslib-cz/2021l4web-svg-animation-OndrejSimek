@@ -34,14 +34,21 @@
 
             </div>
             <ul>
-                <li class="list-item"><a onclick="smajlik()">smajlík</a></li>
-                <li class="list-item"><a onclick="signature()">Autor</a></li>
+                <li class="list-item"><a onclick="smajlik()">Smajlík</a></li>
+                <li class="list-item"><a onclick="signature()">Podpis</a></li>
+                <li class="list-item"><a onclick="menu()">Otevření</a></li>
+                <li class="list-item" style="display: none;"><a onclick="countdown()">Odpočet</a></li>
             </ul>
         </nav>
     </header>
+    <div id="contdown" class="countdown" style="display: none;">
+        <span style="height: 20px; width: 100px; position: absolute; left: 300px; top: 0; background-color: red;"
+            id="count"></span>
+        <input style="" id="seconds">
+    </div>
 
     <svg class="svg" id="smile" viewbox=" 0 0" width="150" height="150">
-        <circle id="circle" cx="75" cy="75" r="60" style="stroke: lightblue; stroke-width:10; fill:none" />
+        <circle id="circle" cx="75" cy="75" r="60" style="stroke: lightblue; stroke-width:10; fill:gray" />
         <circle id="circle2" cx="75" cy="85" r="20" style="stroke: lightblue; stroke-width:10; fill:none" />
         <circle class="eye" cx="50" cy="55" r="5" style="stroke: lightblue; stroke-width:3; fill:lightblue" />
         <circle class="eye" cx="100" cy="55" r="5" style="stroke: lightblue; stroke-width:3; fill:lightblue" />
@@ -60,6 +67,27 @@
                 stroke-width="5" />
         </g>
     </svg>
+    <div id="menu" class="menu" style="display: none;">
+        <svg class="triangle triangle-1" width="150" height="150" viewBox="0 0 1280 1153">
+            <g transform="translate(0,1153) scale(0.1,-0.1)" fill="#E3B505" stroke="none">
+                <path
+                    d="m 12153.308,5861.5593 c -46,423 -228,838 -490,1114 -111,118 -217,201 -364,289 -364,216 -8205.9998,4707.9997 -8279.9998,4741.9997 -444,208 -916,205 -1361,-9 -470,-226 -835.00003,-672 -965.00003,-1179 -57,-225 -53,205 -56,-5031.9997 -3,-3271 0,-4830.99996 7,-4897.99996 52,-494 308,-915.000002 729.00003,-1198 231,-156 484,-256 776,-306 124,-21 452,-24 570,-5 172,28 338,78 535,160 484,202 929,447.999998 1795,992 806,506.99996 581,375 3630,2119.99996 1435.9998,821 2654.9998,1520 2709.9998,1553 146,86 221,145 331,260 222,231 359,515 420,873 18,109 26,409 13,524 z" />
+            </g>
+        </svg>
+        <svg class="triangle triangle-2" width="150" height="150" viewBox="0 0 1280 1153">
+            <g transform="translate(0,1153) scale(0.1,-0.1)" fill="#DB504A" stroke="none">
+                <path
+                    d="m 12153.308,5861.5593 c -46,423 -228,838 -490,1114 -111,118 -217,201 -364,289 -364,216 -8205.9998,4707.9997 -8279.9998,4741.9997 -444,208 -916,205 -1361,-9 -470,-226 -835.00003,-672 -965.00003,-1179 -57,-225 -53,205 -56,-5031.9997 -3,-3271 0,-4830.99996 7,-4897.99996 52,-494 308,-915.000002 729.00003,-1198 231,-156 484,-256 776,-306 124,-21 452,-24 570,-5 172,28 338,78 535,160 484,202 929,447.999998 1795,992 806,506.99996 581,375 3630,2119.99996 1435.9998,821 2654.9998,1520 2709.9998,1553 146,86 221,145 331,260 222,231 359,515 420,873 18,109 26,409 13,524 z" />
+            </g>
+        </svg>
+        <svg class="triangle triangle-3" width="150" height="150" viewBox="0 0 1280 1153">
+            <g transform="translate(0,1153) scale(0.1,-0.1)" fill="#E3B505" stroke="none">
+                <path
+                    d="m 12153.308,5861.5593 c -46,423 -228,838 -490,1114 -111,118 -217,201 -364,289 -364,216 -8205.9998,4707.9997 -8279.9998,4741.9997 -444,208 -916,205 -1361,-9 -470,-226 -835.00003,-672 -965.00003,-1179 -57,-225 -53,205 -56,-5031.9997 -3,-3271 0,-4830.99996 7,-4897.99996 52,-494 308,-915.000002 729.00003,-1198 231,-156 484,-256 776,-306 124,-21 452,-24 570,-5 172,28 338,78 535,160 484,202 929,447.999998 1795,992 806,506.99996 581,375 3630,2119.99996 1435.9998,821 2654.9998,1520 2709.9998,1553 146,86 221,145 331,260 222,231 359,515 420,873 18,109 26,409 13,524 z" />
+            </g>
+        </svg>
+
+    </div>
 
 
 

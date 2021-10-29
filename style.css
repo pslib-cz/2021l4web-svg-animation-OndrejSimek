@@ -9,8 +9,9 @@ body {
     animation: sign 4s ease;
     animation-fill-mode: forwards;
     position: absolute;
-    top: 200px;
-    left: 200px;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 200px);
+
 }
 
 @keyframes sign {
@@ -57,7 +58,7 @@ body {
     animation-delay: 5s;
     position: absolute;
     top: 0;
-    left: 130px;
+    left: 250px;
 }
 
 #smile:hover {
@@ -68,28 +69,28 @@ body {
 @keyframes lol {
     0% {
         top: 0;
-        left: 0;
+        left: 250;
         transform: rotate(4turn);
     }
 
     25% {
         top: 0;
-        left: calc(100vw - 170px);
+        left: calc(100vw - 200px);
     }
 
     50% {
-        top: calc(100vh - 170px);
-        left: calc(100vw - 170px);
+        top: calc(100vh - 200px);
+        left: calc(100vw - 200px);
     }
 
     75% {
-        top: calc(100vh - 170px);
-        left: 0;
+        top: calc(100vh - 200px);
+        left: 250px;
     }
 
     100% {
         top: 0;
-        left: 0;
+        left: 250;
     }
 
 }
@@ -116,37 +117,71 @@ body {
     transform: translateX(-75%);
     z-index: 2;
 }
+
 nav {
     width: 80px;
     background-color: black;
     height: 100vh;
     transition: linear 0.3s;
 }
+
 nav:hover {
     width: 250px;
     transition: linear 0.3s;
 }
+
 .list-item {
     color: white;
     display: none;
 }
+
 nav:hover li {
     display: block;
 
 }
+
 .open-menu {
     width: 100px;
     transform: translateX(-15%);
 }
 
+
+
 nav:hover .open-menu .triangle-1 {
     transform: translateX(85%);
     opacity: 80%;
 }
+
 nav:hover .open-menu .triangle-2 {
     transform: translateX(10%);
 }
+
 nav:hover .open-menu .triangle-3 {
+    transform: translateX(10%);
+    opacity: 0;
+
+}
+
+.menu {
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 200px);
+}
+
+.menu .triangle {
+    margin: 0;
+}
+
+.menu:hover .triangle-1 {
+    transform: translateX(85%);
+    opacity: 80%;
+}
+
+.menu:hover .triangle-2 {
+    transform: translateX(10%);
+}
+
+.menu:hover .triangle-3 {
     transform: translateX(10%);
     opacity: 0;
 
