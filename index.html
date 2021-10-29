@@ -7,6 +7,196 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVG</title>
     <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+    margin: 0;
+}
+
+#signature {
+    display: none;
+    stroke-dasharray: 650.3245849609375;
+    stroke-dashoffset: 650.3245849609375;
+    animation: sign 4s ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 200px);
+
+}
+
+@keyframes sign {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#circle {
+    stroke-dasharray: 380;
+    stroke-dashoffset: 380;
+    animation: sign 4s linear;
+    animation-fill-mode: forwards;
+}
+
+#circle2 {
+    stroke-dasharray: 63.3;
+    stroke-dashoffset: -126.6;
+    animation: sign 4s linear;
+}
+
+.eye {
+    animation: opacity 2s;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+#smile {
+    display: none;
+    transition: linear 0.5s;
+    animation: lol 5s;
+    animation-delay: 5s;
+    position: absolute;
+    top: 0;
+    left: 250px;
+}
+
+#smile:hover {
+    transform: rotate(180deg) scale(0);
+    transition: linear 0.5s;
+}
+
+@keyframes lol {
+    0% {
+        top: 0;
+        left: 250;
+        transform: rotate(4turn);
+    }
+
+    25% {
+        top: 0;
+        left: calc(100vw - 200px);
+    }
+
+    50% {
+        top: calc(100vh - 200px);
+        left: calc(100vw - 200px);
+    }
+
+    75% {
+        top: calc(100vh - 200px);
+        left: 250px;
+    }
+
+    100% {
+        top: 0;
+        left: 250;
+    }
+
+}
+
+.triangle {
+    margin-top: 20px;
+    position: relative;
+    opacity: 80%;
+    transition: all 0.3s ease-out;
+}
+
+.triangle-1 {
+    transform: translateX(-5%);
+    opacity: 0;
+    z-index: 10;
+}
+
+.triangle-2 {
+    z-index: 5;
+    opacity: 95%;
+}
+
+.triangle-3 {
+    transform: translateX(-75%);
+    z-index: 2;
+}
+
+nav {
+    width: 80px;
+    background-color: black;
+    height: 100vh;
+    transition: linear 0.3s;
+}
+
+nav:hover {
+    width: 250px;
+    transition: linear 0.3s;
+}
+
+.list-item {
+    color: white;
+    display: none;
+}
+
+nav:hover li {
+    display: block;
+
+}
+
+.open-menu {
+    width: 100px;
+    transform: translateX(-15%);
+}
+
+
+
+nav:hover .open-menu .triangle-1 {
+    transform: translateX(85%);
+    opacity: 80%;
+}
+
+nav:hover .open-menu .triangle-2 {
+    transform: translateX(10%);
+}
+
+nav:hover .open-menu .triangle-3 {
+    transform: translateX(10%);
+    opacity: 0;
+
+}
+
+.menu {
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 200px);
+}
+
+.menu .triangle {
+    margin: 0;
+}
+
+.menu:hover .triangle-1 {
+    transform: translateX(85%);
+    opacity: 80%;
+}
+
+.menu:hover .triangle-2 {
+    transform: translateX(10%);
+}
+
+.menu:hover .triangle-3 {
+    transform: translateX(10%);
+    opacity: 0;
+
+}
+    </style>
 </head>
 
 <body>
@@ -91,7 +281,50 @@
 
 
 
-    <script src="./style.js"></script>
+    <script>
+        function smajlik() {
+    document.getElementById("signature").style.display = "none";
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("smile").style.display = "block";
+}
+
+function signature() {
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("smile").style.display = "none";
+    document.getElementById("signature").style.display = "block";
+}
+function menu() {
+    document.getElementById("signature").style.display = "none";
+    document.getElementById("smile").style.display = "none";
+    document.getElementById("menu").style.display = "block";
+}
+
+var i = 0;
+var n = document.getElementById("seconds").value; //čas jak dlouho to poběží
+function countdown() {
+    setInterval(function () {
+        if (i == n) {
+            clearInterval(n)
+            return
+        }
+        i++;
+        document.getElementById("count").innerHTML = i;
+    }, 1000);
+}
+/*
+class Odpocet {
+    constructor(time){
+        this.time = time;
+    }
+    start(){
+        console.log(this.time);
+    }
+}
+let hodiny = new Odpocet(5);
+hodiny.start(); */
+
+
+    </script>
 </body>
 
 </html>
